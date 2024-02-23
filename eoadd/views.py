@@ -29,3 +29,15 @@ def factorial(request):
         return render(request, "fact.html", {'msg':msg})
     else:
         return render(request,"fact.html")
+
+def add(request):
+    if request.method == "POST":
+        n1 = int(request.POST.get("num1"))
+        print("n1= ",n1)
+        n2 = int(request.POST.get("num2"))
+        print("n2= ", n2)
+        res = n1+n2
+        msg = f"Add of {n1} & {n2} is {res}"
+        return render(request, "add.html", {'msg':msg})
+    else:
+        return render(request, "add.html")
