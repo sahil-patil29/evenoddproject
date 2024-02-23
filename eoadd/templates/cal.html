@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculate</title>
+</head>
+<body>
+    <center>
+        <form action="{% url 'cal11' %}" method="post">
+          {% csrf_token %}
+          <h1>Even Odd App</h1>
+            <input type="number" name="num" placeholder="Enter a num" required>
+            <br><br>
+            <input type="submit" value="checking">
+            <p>Sahilk</p>
+            <br><br>
+            <p>{{msg}}</p>
+        </form>
+    </center>
+
+</body>
+</html>

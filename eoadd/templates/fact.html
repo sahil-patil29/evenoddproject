@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Factorial</title>
+</head>
+<body>
+    <center>
+        <form action="{% url 'fact11' %}" method="POST">
+            {% csrf_token %}
+            <input type="number" name="num" placeholder="enter a num" required>
+            <br><br>
+            <input type="submit" value="submit">
+            <p>Sahil11</p>
+            {{msg}}
+        </form>
+    </center>
+
+</body>
+</html>
